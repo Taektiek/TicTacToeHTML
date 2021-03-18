@@ -16,10 +16,13 @@ function onFieldClick(context) {
         }
     }
     let winner = checkWin();
+    winscreen = document.getElementById("winscreen");
     if (winner != "") {
-        winscreen = document.getElementById("winscreen");
         winscreen.style.visibility = "visible";
         winscreen.innerHTML = winscreen.innerHTML.replaceAt(0, winner);
+    } else if (checkTie()) {
+        winscreen.style.visibility = "visible";
+        winscreen.innerHTML = 'Tie!<button onclick="location.reload(true)">Play Again</button>';
     }
 }
 
@@ -60,4 +63,16 @@ function checkWin() {
     return ""
 }
 
-console.log(getLines())
+function checkTie() {
+    let c = 0;
+    for (i=0;i<9;i++) {
+        if (fields[i].innerHTML != "") {
+            c++;
+        }
+    }
+    if (c === 9) {
+        return true;
+    } else {
+        return false;
+    }
+}
