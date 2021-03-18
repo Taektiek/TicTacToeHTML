@@ -6,6 +6,24 @@ body {
     background-color: darkslategray;
 }
 
+button {
+    background-color: snow;
+    display: inline-block;
+    border: none;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgb(211, 211, 211);
+}
+
 .container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -17,7 +35,13 @@ body {
 }
 
 .field {
+    color:black;
     background-color: lightyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 100px;
     min-height: 100px;
     max-width: 200px;
@@ -39,6 +63,7 @@ body {
 #winscreen {
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -48,6 +73,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     font-size: 50px;
     text-align: center;
 
